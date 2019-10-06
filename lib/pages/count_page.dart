@@ -1,4 +1,4 @@
-import 'package:carros_flutter_web/utils/web/prefs.dart';
+import 'package:carros_flutter_web/web/utils/prefs.dart';
 import 'package:flutter/material.dart';
 
 class CountPage extends StatefulWidget {

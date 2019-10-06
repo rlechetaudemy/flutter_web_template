@@ -5,7 +5,7 @@ import 'package:provider/provider.dart';
 
 class CarroPage extends StatefulWidget {
 
-  Carro carro;
+  final Carro carro;
 
   CarroPage(this.carro);
 

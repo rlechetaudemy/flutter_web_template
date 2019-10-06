@@ -58,7 +58,7 @@ class UploadHelper {
           String base64 = s.substring(s.indexOf(",")+1);
 
           String mimeType = s.substring(s.indexOf(":")+1,s.indexOf(";"));
-          print("mimeType: ${mimeType}");
+          print("mimeType: $mimeType");
 
           final fileUpload = FileUpload(file.name, mimeType, base64);
 
