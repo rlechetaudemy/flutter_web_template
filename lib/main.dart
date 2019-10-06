@@ -17,6 +17,7 @@ class MyApp extends StatelessWidget {
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
+        title: "Flutter Web Template",
         theme: _theme(),
         home: HomePage(),
       ),
