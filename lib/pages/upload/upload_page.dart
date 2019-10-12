@@ -56,7 +56,7 @@ class _UploadPageState extends State<UploadPage> {
           child: Container(
             color: Colors.grey[100],
             child: ConstrainedBox(
-              constraints: BoxConstraints.tightFor(height: 250),
+              constraints: BoxConstraints.tightFor(height: 450),
               child: Center(
                 child: url == null || showProgress
                     ? showProgress
@@ -69,6 +69,7 @@ class _UploadPageState extends State<UploadPage> {
                           launch(url);
                         },
                         child: Column(
+                          mainAxisSize: MainAxisSize.min,
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
                             Image.network(url),
