@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:html';
 
+import 'package:carros_flutter_web/colors.dart';
 import 'package:carros_flutter_web/pages/upload/upload_api.dart';
 import 'package:carros_flutter_web/pages/upload/upload_helper.dart';
 import 'package:carros_flutter_web/utils/api_response.dart';
@@ -45,7 +46,7 @@ class _UploadPageState extends State<UploadPage> {
         ),
         Center(
           child: RaisedButton(
-            child: Text("Upload"),
+            child: Text("Upload",style: TextStyle(color: AppColors.blue),),
             onPressed: _onClickUpload,
           ),
         ),
@@ -55,29 +56,26 @@ class _UploadPageState extends State<UploadPage> {
         Center(
           child: Container(
             color: Colors.grey[100],
-            child: ConstrainedBox(
-              constraints: BoxConstraints.tightFor(height: 450),
-              child: Center(
-                child: url == null || showProgress
-                    ? showProgress
-                        ? CircularProgressIndicator()
-                        : FlutterLogo(
-                            size: 100,
-                          )
-                    : InkWell(
-                        onTap: () {
-                          launch(url);
-                        },
-                        child: Column(
-                          mainAxisSize: MainAxisSize.min,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget>[
-                            Image.network(url),
-                            Text(url),
-                          ],
-                        ),
+            child: Center(
+              child: url == null || showProgress
+                  ? showProgress
+                      ? CircularProgressIndicator()
+                      : FlutterLogo(
+                          size: 100,
+                        )
+                  : InkWell(
+                      onTap: () {
+                        launch(url);
+                      },
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Image.network(url),
+                          Text(url),
+                        ],
                       ),
-              ),
+                    ),
             ),
           ),
         ),
